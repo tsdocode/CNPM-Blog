@@ -67,6 +67,12 @@ public class CreateAndEditContentServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+	    response.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html; charset=UTF-8");
+		
+		
+		
 		int mode =Integer.parseInt(request.getParameter("mode"));
 		
 		String title = request.getParameter("title");
@@ -117,9 +123,8 @@ public class CreateAndEditContentServlet extends HttpServlet {
         }
 		
 		
-		
-		
-		doGet(request, response);
+        request.getRequestDispatcher("ViewContentServlet").forward(request, response);
+        
 	}
 
 }

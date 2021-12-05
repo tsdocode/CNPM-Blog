@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <div id="page-wrapper">
 <h2>View Content</h2>
@@ -30,7 +30,7 @@
           <td><%= content.getId()%> </td>
           <td><%= content.getTitle()%></td>
           <td>
-            <%= content.getContent()%>
+            <%= content.getBrief()%>
           </td>
           <td><%= content.getCreateDate() %></td>
           <td class="text-center">
@@ -44,6 +44,8 @@
         </tr>
 		<%}
 		%>
+
+
 
         
       </tbody>

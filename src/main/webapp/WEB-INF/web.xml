@@ -72,6 +72,27 @@
 		<servlet-name>DeleteContent</servlet-name>
 		<servlet-class>controller.DeleteContent</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ViewContentAllServlet</display-name>
+		<servlet-name>ViewContentAllServlet</servlet-name>
+		<servlet-class>controller.ViewContentAllServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ViewContentDetail</display-name>
+		<servlet-name>ViewContentDetail</servlet-name>
+		<servlet-class>controller.ViewContentDetail</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ListContentServlet</display-name>
+		<servlet-name>ListContentServlet</servlet-name>
+		<servlet-class>controller.ListContentServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Tiles Dispatch</servlet-name>
@@ -104,5 +125,17 @@
 	<servlet-mapping>
 		<servlet-name>DeleteContent</servlet-name>
 		<url-pattern>/DeleteContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewContentAllServlet</servlet-name>
+		<url-pattern>/ViewContentAllServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewContentDetail</servlet-name>
+		<url-pattern>/ViewContentDetail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListContentServlet</servlet-name>
+		<url-pattern>/ListContentServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

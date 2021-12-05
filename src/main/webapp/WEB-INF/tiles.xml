@@ -10,6 +10,7 @@
 		<put-attribute name="body" value="/layout/body.jsp" />
 		<put-list-attribute name="stylesheets">
         	<add-attribute value="/resources/css/main.css" />
+        	<add-attribute value="/resources/css/post.css" />
     	</put-list-attribute>
     	<put-list-attribute name="javascripts">
     		<add-attribute value="/resources/js/index.js" />
@@ -31,4 +32,21 @@
 		<put-attribute name="title" value="Add Content" type="string"/>
     	<put-attribute name="body" value="/views/edit-profile.jsp" />
 	</definition>
+	<definition name="list-content" extends="main" >
+		<put-attribute name="title" value="Explore" type="string"/>
+    	<put-attribute name="body" value="/views/list-content.jsp" />
+	</definition>
+		<definition name="view_content_detail" extends="main" >
+		<put-attribute name="title" value="Detail" type="string"/>
+    	<put-attribute name="body" value="/views/post.jsp" />
+	</definition>
+	
+	<definition name="all-content" extends="main" >
+		<put-attribute name="title" value="Detail" type="string"/>
+    	<put-attribute name="body" value="/views/all-content.jsp" />
+	</definition>
+	
+	
+	
+	
 </tiles-definitions>

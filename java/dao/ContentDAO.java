@@ -37,6 +37,10 @@ public class ContentDAO {
 	
 	private static final String DELETE_CONTENT_SQL = "delete from content where id=?;";
 	
+	private static final String LIST_CONTENT_SQL= "select * from content limit ? , ? ";
+	
+	private static final String COUNT_CONTENT_SQL = "select count(*) as total from content";
+	
 	public boolean insertContent(Content insertContent) throws SQLException {
     	boolean rowInserted;
     	
@@ -89,6 +93,44 @@ public class ContentDAO {
         }
         return rowUpdated;
     }
+
+	public ArrayList<Content> listContent(int numPage , int pageNo) {
+		ArrayList<Content> contents = new ArrayList<Content>();
+		// Step 1: Establishing a Connection
+		try (Connection connection = conn.getConnection();
+				// Step 2:Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(LIST_CONTENT_SQL);) {
+
+			preparedStatement.setInt(1, pageNo);
+			preparedStatement.setInt(2, numPage);
+			
+			System.out.println(preparedStatement);
+			// Step 3: Execute the query or update query
+			ResultSet rs= preparedStatement.executeQuery();
+
+			// Step 4: Process the ResultSet object.
+			
+			  while (rs.next()) { 
+				  int id = Integer.parseInt(rs.getString("id")); 
+				  String title = rs.getString("title"); 
+				  String brief = rs.getString("brief"); 
+				  String content = rs.getString("content");
+				  String author_id = rs.getString("author_id");
+				  String createDate = rs.getString("CreatedDate");
+				  String updateDate = rs.getString("UpdatedDate");
+				  Content newContent = new Content(
+						  		id, title, brief,  content, author_id, createDate, updateDate
+						  );
+				  contents.add(newContent);
+
+			  }
+			 
+		} catch (SQLException e) {
+			er.printSQLException(e);
+		}
+		return contents;
+    }
+	
 	
 	public ArrayList<Content> selecContent() {
 		ArrayList<Content> contents = new ArrayList<Content>();
@@ -124,6 +166,30 @@ public class ContentDAO {
 		return contents;
     }
 	
+	
+	public int getCountContent() throws SQLException {
+		int total = 0;
+		Content selectedContent = new Content();
+        // try-with-resource statement will auto close the connection.
+        try (Connection connection = conn.getConnection(); 
+        		PreparedStatement preparedStatement = connection.prepareStatement(COUNT_CONTENT_SQL)) {
+            System.out.println(preparedStatement);
+         // Step 3: Execute the query or update query
+		ResultSet rs = preparedStatement.executeQuery();
+		// Step 4: Process the ResultSet object.
+		 
+		  while (rs.next()) { 
+			  total= rs.getInt("total"); 
+		  }
+		  
+        }
+        catch (SQLException e) {
+			er.printSQLException(e);
+		}
+        
+        return total;
+        
+    }
 	
 	public Content getContentByID(int content_id) throws SQLException {
 

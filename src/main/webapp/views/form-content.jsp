@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 
 <%@ page import="model.Content" %>
@@ -65,8 +65,9 @@
 	var rawData = {
 			"title" : "<%= ct.getTitle()%>",
 			"brief" : "<%= ct.getBrief()%>",
-			"content" : "<%= ct.getContent()%>",
 	};
+	
+	var code = `<%=ct.getContent()%>`;
 	
 	
 	const fillData = (data) => {
@@ -75,11 +76,31 @@
 			    $("#"+key).val(value);
 			  }
 			}
+		
+		$("#content").summernote('pasteHTML', code);
 	}
 	
 	fillData(rawData);
 	
 </script>
+
+
+<script>
+      $('#content').summernote({
+        placeholder: 'This is place hodler',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 
 </div>
 

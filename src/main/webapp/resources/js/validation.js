@@ -56,10 +56,10 @@ $().ready(function() {
 			"title": {
 				required: true,
 				maxlength:200,
-				minlength:50
+				minlength:10
 			},
 			"brief": {
-				minlength:30,
+				minlength:10,
 				maxlength:150
 			},
 			"content": {

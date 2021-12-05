@@ -2,7 +2,7 @@ var viewContentBar = document.querySelector('#view_content');
 var formContentBar = document.querySelector('#form_content');
 var editProfileBar = document.querySelector('#edit_profile');
 var viewContent = document.querySelector('#page-wrapper');
-viewContentBar.onclick = function(e) {
+/*viewContentBar.onclick = function(e) {
     viewContent.innerHTML = '<h2 >Loading</h2>';
     e.preventDefault();
     var serviceURL = '/WebMVCProject/ViewContentServlet';
@@ -64,4 +64,4 @@ editProfileBar.onclick = function(e) {
             }
         });
     }, 3000);
-}
+}*/

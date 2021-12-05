@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -16,10 +16,13 @@
 				</div>
 			</form>
 		</li>
-		<li id="view_content"><a href="ViewContentServlet" id="need"><i class="fa fa-table""></i> View
-				Contents</a></li>
+		<li id="explore_content"><a href="ViewContentAllServlet"><i class="fa fa-bar-chart"></i> Explore</a></li>
+		<li id="view_content"><a href="ViewContentServlet" id="need"><i class="fa fa-table""></i> 
+				Your Contents</a></li>
 		<li id="form_content"><a href="CreateAndEditContentServlet?mode=0"><i class="fa fa-pencil-square-o"></i> Form
 				Content</a></li>
+
+
 	</ul>
 </div>
 <script src="resources/js/search.js" type="text/javascript"></script>
