@@ -1,5 +1,8 @@
-# Đồ án  CNPM 
-# Forum
+# Đồ án CNPM 
+# Quản lý diễn đàn
+
+
+
 
 ## Chức năng:
 - Đăng nhập
@@ -8,3 +11,7 @@
 - Thêm Post
 - Sửa Post
 - Xoá Post
+- Edit Post bằng RichText:
+    - Format 
+    - Ảnh bằng URL
+- Phân trang show Post
