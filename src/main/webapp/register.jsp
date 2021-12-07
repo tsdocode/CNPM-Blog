@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -33,7 +33,43 @@
 <body>
 
 	<c:set var="err" scope="page" value="fail"></c:set>
-	
+	<nav class="navbar navbar-inverse " style="border-radius: 0%;">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Blog</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Menu <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul></li>
+				</ul>
+
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
@@ -51,8 +87,8 @@
 									<span aria-hidden="true">&times;</span>
 								</button>
 								<span class="glyphicon glyphicon-exclamation-sign"
-									aria-hidden="true"></span> <strong>Warning!</strong> 
-									Email or username already exists
+									aria-hidden="true"></span> <strong>Warning!</strong> Email or
+								username already exists
 							</div>
 						</c:if>
 						<form accept-charset="UTF-8" role="form" id="validate_reg_form"
@@ -75,7 +111,7 @@
 										name="re-password" type="password" value="">
 								</div>
 
-								<input class="btn btn-lg btn-success btn-block" type="submit"
+								<input class="btn btn-lg btn-info btn-block" type="submit"
 									value="Register">
 
 							</fieldset>
@@ -90,5 +126,17 @@
 			</div>
 		</div>
 	</div>
+
+	<footer id="footer" class="footer-1">
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>Copyright © 2021. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

@@ -3,13 +3,13 @@
 
 <% int total = (int)request .getAttribute("totalPost"); %>
  
-  <div id="page-wrapper">
+
   	<div id = "post-list" >
   	
   	</div>
 	   <div id="pagination" style="margin-left: 50%;">
-	   </div>
-  </div>
+	</div>
+
    
   <script>
   var serviceURL = '/WebMVCProject/ListContentServlet?pageNO=1&numPage=4&total=2';
@@ -23,7 +23,7 @@
 		    href: "#result-page-{{number}}",
 		})
 
-	  
+	
 	  $.ajax({
           type: "GET",
           url: serviceURL,
@@ -37,7 +37,7 @@
               alert(errorThrown);
           }
       });	});
-  
+ 
   
   $('#pagination').on("page", function(event, num){
 	    console.log(num);

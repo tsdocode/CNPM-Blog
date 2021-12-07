@@ -6,7 +6,6 @@
 	<definition name="main" template="/layout/main.jsp">
 		<put-attribute name="title" value="Welcome" type="string"/>
 		<put-attribute name="header" value="/layout/header.jsp" />
-		<put-attribute name="menu" value="/layout/menu.jsp" />
 		<put-attribute name="body" value="/layout/body.jsp" />
 		<put-list-attribute name="stylesheets">
         	<add-attribute value="/resources/css/main.css" />
@@ -15,7 +14,6 @@
     	<put-list-attribute name="javascripts">
     		<add-attribute value="/resources/js/index.js" />
     		<add-attribute value="/resources/js/validation.js" />
-    		<add-attribute value="/resources/js/ajax.js" />
     	</put-list-attribute>
 	</definition>
 	<!-- add employee page -->
@@ -42,6 +40,7 @@
 	</definition>
 	
 	<definition name="all-content" extends="main" >
+		<put-attribute name="header" value="" />
 		<put-attribute name="title" value="Detail" type="string"/>
     	<put-attribute name="body" value="/views/all-content.jsp" />
 	</definition>

@@ -35,7 +35,7 @@ HttpSession session = request.getSession();
 		if (session.isNew()) {
             re = request.getRequestDispatcher("login.jsp");
         } else {
-            re = request.getRequestDispatcher("home-page.jsp");   
+            re = request.getRequestDispatcher("ViewContentServlet");   
         }
 		re.forward(request, response);
 	}
