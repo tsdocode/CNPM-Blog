@@ -48,9 +48,6 @@
 	</header>
 	
 	<div>
-		<aside>
-			<tiles:insertAttribute name="menu" />
-		</aside>
 		<section>
 			<tiles:insertAttribute name="body" />
 		</section>
@@ -58,7 +55,9 @@
 </div>
 </body>
 
+<script src="resources/js/search.js" type="text/javascript"></script>
 
+<script src="resources/js/datatable.js" type="text/javascript"></script>
    <c:forEach var="js" items="${javascripts}">
     	<script type="text/javascript" src="<c:url value="${js}"/>"></script>
     </c:forEach>

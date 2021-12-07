@@ -50,7 +50,7 @@ public class UserLoginServlet extends HttpServlet {
 
 		RequestDispatcher re = null;
 		if (root) {
-			dest = "home-page.jsp";
+			dest = "ViewContentServlet";
 			
 			User info = new User();
 			
